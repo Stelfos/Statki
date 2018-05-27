@@ -17,12 +17,6 @@ typedef struct Gracz
 	int statek2;
 	int statek1;
 	//-------------------------
+
+	int pozostale_statki;
 }gracz;
-/* gracz1 = {
-	.twoja_tura = 1,
-	.plansza = {puste},
-	.statek4 = 1,
-	.statek3 = 2,
-	.statek2 = 3,
-	.statek1 = 4
-}*/

@@ -1,0 +1,6 @@
+﻿  Source.c
+d:\git\statki\statki\source.c(76): warning C4013: 'system' undefined; assuming extern returning int
+d:\git\statki\statki\source.c(90): warning C4013: 'malloc' undefined; assuming extern returning int
+d:\git\statki\statki\source.c(90): warning C4047: '=': 'char *' differs in levels of indirection from 'int'
+d:\git\statki\statki\source.c(98): warning C4013: 'tolower' undefined; assuming extern returning int
+  Statki.vcxproj -> D:\Git\Statki\x64\Debug\Statki.exe
