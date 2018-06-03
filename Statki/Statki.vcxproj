@@ -115,12 +115,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Obsluga_plikow.c" />
     <ClCompile Include="Source.c" />
+    <ClCompile Include="Statki.c" />
     <ClCompile Include="Ukladanie_statkow.c" />
+    <ClCompile Include="Wyswietlanie_planszy.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Obsluga_plikow.h" />
     <ClInclude Include="Statki.h" />
     <ClInclude Include="Ukladanie_statkow.h" />
+    <ClInclude Include="Wyswietlanie_planszy.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

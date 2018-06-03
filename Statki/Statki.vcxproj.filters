@@ -21,12 +21,27 @@
     <ClCompile Include="Ukladanie_statkow.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Wyswietlanie_planszy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Obsluga_plikow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Statki.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Statki.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ukladanie_statkow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wyswietlanie_planszy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Obsluga_plikow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

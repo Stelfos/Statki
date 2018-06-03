@@ -1,5 +1,16 @@
 #include "Ukladanie_statkow.h"
 
+void rozstaw(gracz *g)
+{
+	system("cls");
+	printf("Tura: %s\n", g->nazwa);
+	system("PAUSE");
+	ustaw_statek4(g);
+	//ustaw_statek3(g);
+	//ustaw_statek2(g);
+	//ustaw_statek1(g);
+}
+
 void ustaw_statek4(gracz *g)
 {
 	char i = "*";
