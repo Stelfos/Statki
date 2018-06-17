@@ -67,7 +67,7 @@ void wyswietl_p_plansze(gracz g)
 void wyswietl_plansze(gracz g)
 {
 	system("cls");
-	printf("Pozostalo %d pol do trafienia\n\n", g.pozostale_statki);
+	printf("Pozostalo %d pol do trafienia\n\n", g.pozostale_statki+1);
 	wyswietl_t_plansze(g);
 	wyswietl_p_plansze(g);
 }

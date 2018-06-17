@@ -5,10 +5,11 @@ void rozstaw(gracz *g)
 	system("cls");
 	printf("Tura: %s\n", g->nazwa);
 	system("PAUSE");
+
 	ustaw_statek4(g);
-	//ustaw_statek3(g);
-	//ustaw_statek2(g);
-	//ustaw_statek1(g);
+	ustaw_statek3(g);
+	ustaw_statek2(g);
+	ustaw_statek1(g);
 }
 
 void ustaw_statek4(gracz *g)
@@ -21,16 +22,13 @@ void ustaw_statek4(gracz *g)
 	{
 		system("cls");
 		wyswietl_t_plansze(*g);
-		i = malloc(sizeof(int));
 		printf("Jak chcesz ustawic swoj cztero masztowiec?(Pozostalo %d):\n1.Poziomo\n2.Pionowo\n", (g->statek4));
 		scanf_s("%c", &i, sizeof(int));
-
 		switch (i)
 		{
 
 
 		case '1':
-			k[0] = malloc(sizeof(char));
 			printf("W ktorej kolumie?(Podaj litere A-G)\n");
 			scanf_s("%s", &k, 2);
 
@@ -48,7 +46,6 @@ void ustaw_statek4(gracz *g)
 					licz = k[0] - 'a' + 1;
 					for (j = licz; j < licz + 4; j++)
 					{
-						g->t_plansza[w][j] = malloc(sizeof(int));
 						g->t_plansza[w][j] = statek;
 					}
 					true = 0;
@@ -84,7 +81,6 @@ void ustaw_statek4(gracz *g)
 					licz = k[0] - 'a' + 1;
 					for (j = w; j < w + 4; j++)
 					{
-						g->t_plansza[j][licz] = malloc(sizeof(int));
 						g->t_plansza[j][licz] = statek;
 					}
 					true = 0;
@@ -120,7 +116,6 @@ void ustaw_statek3(gracz *g)
 		{
 			system("cls");
 			wyswietl_t_plansze(*g);
-			i = malloc(sizeof(int));
 			printf("Jak chcesz ustawic swoj troj masztowiec?(Pozostalo %d):\n1.Poziomo\n2.Pionowo\n", (g->statek3 - liczba_statkow));
 			scanf_s("%c", &i, sizeof(int));
 
@@ -129,10 +124,8 @@ void ustaw_statek3(gracz *g)
 
 
 			case '1':
-				k[0] = malloc(sizeof(char));
 				printf("W ktorej kolumie?(Podaj litere A-H)\n");
 				scanf_s("%s", &k, 2);
-
 				switch (k[0])
 				{
 				case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h':
@@ -164,7 +157,6 @@ void ustaw_statek3(gracz *g)
 						{
 							for (j = licz; j < licz + 3; j++)
 							{
-								g->t_plansza[w][j] = malloc(sizeof(int));
 								g->t_plansza[w][j] = statek;
 							}
 							true = 0;
@@ -186,7 +178,6 @@ void ustaw_statek3(gracz *g)
 			case '2':
 				printf("W ktorej kolumie?(Podaj litere A-J)\n");
 				scanf_s("%s", &k, 2);
-
 				switch (k[0])
 				{
 				case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h': case 'I': case 'i': case 'J': case 'j':
@@ -218,7 +209,6 @@ void ustaw_statek3(gracz *g)
 						{
 							for (j = w; j < w + 3; j++)
 							{
-								g->t_plansza[j][licz] = malloc(sizeof(int));
 								g->t_plansza[j][licz] = statek;
 							}
 							true = 0;
@@ -256,19 +246,15 @@ void ustaw_statek2(gracz *g)
 		{
 			system("cls");
 			wyswietl_t_plansze(*g);
-			i = malloc(sizeof(char));
 			printf("Jak chcesz ustawic swoj dwu masztowiec?(Pozostalo %d):\n1.Poziomo\n2.Pionowo\n", (g->statek2 - liczba_statkow));
 			scanf_s("%c", &i, sizeof(char));
-
 			switch (i)
 			{
 
 
 			case '1':
-				k[0] = malloc(sizeof(char));
 				printf("W ktorej kolumie?(Podaj litere A-I)\n");
 				scanf_s("%s", &k, 2);
-
 				switch (k[0])
 				{
 				case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h': case 'I': case 'i':
@@ -297,7 +283,6 @@ void ustaw_statek2(gracz *g)
 						{
 							for (j = licz; j < licz + 2; j++)
 							{
-								g->t_plansza[w][j] = malloc(sizeof(int));
 								g->t_plansza[w][j] = statek;
 							}
 							true = 0;
@@ -319,7 +304,6 @@ void ustaw_statek2(gracz *g)
 			case '2':
 				printf("W ktorej kolumie?(Podaj litere A-J)\n");
 				scanf_s("%s", &k, 2);
-
 				switch (k[0])
 				{
 				case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h': case 'I': case 'i': case 'J': case 'j':
@@ -348,7 +332,6 @@ void ustaw_statek2(gracz *g)
 						{
 							for (j = w; j < w + 2; j++)
 							{
-								g->t_plansza[j][licz] = malloc(sizeof(int));
 								g->t_plansza[j][licz] = statek;
 							}
 							true = 0;
@@ -386,7 +369,6 @@ void ustaw_statek1(gracz *g)
 			system("cls");
 			wyswietl_t_plansze(*g);
 			printf("Gdzie chcesz ustawic swoj jednomasztowiec? (Pozostalo %d)\n", (g->statek1-liczba_statkow));
-			k[0] = malloc(sizeof(char));
 			printf("W ktorej kolumie?(Podaj litere A-J)\n");
 			scanf_s("%s", &k, 2);
 
@@ -412,7 +394,6 @@ void ustaw_statek1(gracz *g)
 						g->t_plansza[w+1][licz-1] != statek && 
 						g->t_plansza[w+1][licz+1] != statek)
 					{
-						g->t_plansza[w][licz] = malloc(sizeof(int));
 						g->t_plansza[w][licz] = statek;
 						true = 0;
 					}

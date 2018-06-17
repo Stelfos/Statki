@@ -6,7 +6,7 @@ gracz *nowy_gracz()
 {
 	gracz *nowy;
 	nowy = malloc(sizeof(gracz));
-	nowy->pozostale_statki = 19;
+	nowy->pozostale_statki = 1; //liczba statkow do zestrzelenia
 	int i, j;
 	for (i = 0; i < 12; i++)
 		for (j = 0; j < 12; j++)
@@ -34,6 +34,7 @@ void rozpoczecie_gry(gracz *gracz1,gracz *gracz2)
 			gracz1->p_plansza[i][j] = gracz2->t_plansza[i][j];
 			gracz2->p_plansza[i][j] = gracz1->t_plansza[i][j];
 		}
+	//-------------------------------------------------------------------
 	zapisz_stan_gry(gracz1);
 	zapisz_stan_gry(gracz2);
 }
@@ -54,19 +55,20 @@ void ruch(gracz *g1, gracz *g2)
 
 void strzelaj(gracz *g, gracz *g2)
 {
-	char *k, koordynaty[3];
+	char *k;
+	char koordynaty[3];
 	int true = 1;
 	while (true)
 	{
 		printf("Gdzie chcesz strzelic?\n(podaj koordynaty, najpierw kolumne potem wiersz np. A0)\n");
-		k = malloc(sizeof(char*));
-		k = fgets(koordynaty, 3, stdin);
-		if (k != NULL)
+		k = fgets(koordynaty,3, stdin);
+		k = koordynaty;
+		if (k[0] != NULL && k[1] != NULL)
 		{
 			int i, j;
 			switch (koordynaty[0])
 			{
-			case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h': case 'I': case 'i':
+			case 'A': case 'a': case 'B': case 'b': case 'C':case 'c': case 'D': case 'd': case 'E': case 'e': case 'F': case 'f': case 'G': case 'g': case 'H': case 'h': case 'I': case 'i': case 'J': case 'j':
 				koordynaty[0] = tolower(koordynaty[0]);
 				j = koordynaty[0] - 'a' + 1;
 				i = koordynaty[1] - 48 + 1;
@@ -90,6 +92,7 @@ void strzelaj(gracz *g, gracz *g2)
 					break;
 				}
 			default:
+				printf("\n");
 				break;
 			}
 		}

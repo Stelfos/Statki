@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Menu.c" />
     <ClCompile Include="Obsluga_plikow.c" />
     <ClCompile Include="Source.c" />
     <ClCompile Include="Statki.c" />
@@ -122,6 +123,7 @@
     <ClCompile Include="Wyswietlanie_planszy.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Obsluga_plikow.h" />
     <ClInclude Include="Statki.h" />
     <ClInclude Include="Ukladanie_statkow.h" />
